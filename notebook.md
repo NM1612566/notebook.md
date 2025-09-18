@@ -39,12 +39,14 @@
 - How do you align something to the left or right?
 - What widget adds space around content?
 
+## Code Definitions
+
 | Term | Definition | Base Structure / Syntax | Real Life Example | App Example |
 |------|------------|--------------------------|-------------------|-------------|
-| variable | A named container used to store a value that may change. | `var x = 5;` | Student weight is 129 |  |
-| constant | A fixed value that cannot change once set. | `const PI = 3.14;` | dna |  |
-|   data type   | The kind of value a variable holds, like numbers or text. | `int`, `String`, `bool` |  |  |
-|   string   | A sequence of characters used to represent words or text. | `"Hello World"` | title of an app |  |
+| variable | A named container used to store a value that may change. | `var x = 5;` | Student weight is 129 |   |
+| constant | A fixed value that cannot change once set. | `const PI = 3.14;` | dna | const AltDesignScreen({super.key}); |
+|   data type   | The kind of value a variable holds, like numbers or text. | `int`, `String`, `bool` |  |  elevation: |
+|   string   | A sequence of characters used to represent words or text. | `"Hello World"` | title of an app |  title: 'TSA Portfolio', |
 |  integer    | Whole number values. | `int age = 16;` | score |  |
 |   double   | Number values with decimals. | `double age = 16.2;` |  |  |
 |  boolean    | A value that can be true or false. | `bool isLoggedIn = false;` | have you worked enough hours to earn overtime |  |
@@ -63,7 +65,41 @@
 | override      | Changing how a built-in or inherited function behaves. | `@override` |  |  |
 |  void    | A function that does not return a value. | `void printMessage() {}` |  |  |
 
+## Flutter Definitions
 
+## Flutter Definitions
+
+| Term | Definition and Description | Base Structure | Real Life Example | App Example |
+|------|----------------------------|----------------|-------------------|-------------|
+|    Main  | A function that runs when your app starts. It tells Flutter what app to show. | `void main() => runApp(MyApp());` | starting |  |
+|   Material App   | The widget that sets up your whole app’s look and navigation. | `MaterialApp(...)` |  |   
+      debugShowCheckedModeBanner: false,
+      title: 'TSA Portfolio',
+      theme: ThemeData( |
+|   scaffold   | A widget that gives you the basic layout: background, navigation bar, floating button, etc. | `Scaffold(...)` |  | 
+      return Scaffold(
+      body: Column(
+ mainAxisAlignment: MainAxisAlignment.start,
+        children: [ |
+|   column   | A widget that holds and displays your content in a straight line from top to bottom. | `Column(...)` |  |  |
+|   row   | A widget that shows things side-by-side. | `Row(...)` |  |  |
+|   container   | A box that holds other widgets. You can add color, padding, borders, or size. | `Container(...)` |  |  |
+|   text   | A widget to display text on the screen. | `Text('Hello')` |  |  |
+|  image    | A widget to show an image using a link from the internet. | `Image.network('https://...')` |  |  |
+|  elevated button    | A clickable button that floats above content. You choose what happens when it's clicked. | `ElevatedButton(onPressed: ..., child: ...)` |  |  |
+|   onPressed   | The code that gets run when a button is tapped or something happens. | `onPressed: () => doSomething()` |  |  |
+|   Stateless Widget   | A class that creates widgets that never change. Good for static screens. | `class HomeScreen extends StatelessWidget` | Home screen |  |
+|   Stateful Widget   | A class for widgets that can change while the app is running. | `class MyWidget extends StatefulWidget` | Mario 3D World Level |  |
+|    Navigator  | Lets you move from one screen to another using route names. | `Navigator.pushNamed(context, '/about')` |  |  |
+|   Padding   | Makes space around a widget inside its container. | `Padding(padding: EdgeInsets.all(8.0), child: ...)` | The spacing between wall decor in a bedroom |  |
+|  Center    | Aligns content in the center of the screen or container. | `Center(child: ...)` | Title in the center of an app |  |
+|   Wrap   | Automatically puts widgets onto a new line when there's no space. | `Wrap(children: [...])` |  |  |
+|   Override   | This marks a method as one that’s replacing a method in a parent class. | `@override` |  |  |
+|   Build   | The special function in every widget that describes what gets drawn on the screen. | `Widget build(BuildContext context) {...}` |  |  |
+|    Build  | Required in every widget class to describe what to show. | `build` |  |  |
+|  Build Context    | A variable that helps the widget know where it is and lets it communicate with the app. | `BuildContext context` |  |  |
+|  supoer.key    | A keyword used to pass a value to the parent widget. | `super.key` | emailing your teacher |  |
+|   const   | A keyword that means the value won't change and is set once. | `const` | home button |  |
 
 
 
