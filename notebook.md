@@ -71,28 +71,21 @@
 
 | Term | Definition and Description | Base Structure | Real Life Example | App Example |
 |------|----------------------------|----------------|-------------------|-------------|
-|    Main  | A function that runs when your app starts. It tells Flutter what app to show. | `void main() => runApp(MyApp());` | starting |  |
-|   Material App   | The widget that sets up your whole app’s look and navigation. | `MaterialApp(...)` |  |   
-      debugShowCheckedModeBanner: false,
-      title: 'TSA Portfolio',
-      theme: ThemeData( |
-|   scaffold   | A widget that gives you the basic layout: background, navigation bar, floating button, etc. | `Scaffold(...)` |  | 
-      return Scaffold(
-      body: Column(
- mainAxisAlignment: MainAxisAlignment.start,
-        children: [ |
-|   column   | A widget that holds and displays your content in a straight line from top to bottom. | `Column(...)` |  |  |
-|   row   | A widget that shows things side-by-side. | `Row(...)` |  |  |
-|   container   | A box that holds other widgets. You can add color, padding, borders, or size. | `Container(...)` |  |  |
-|   text   | A widget to display text on the screen. | `Text('Hello')` |  |  |
-|  image    | A widget to show an image using a link from the internet. | `Image.network('https://...')` |  |  |
-|  elevated button    | A clickable button that floats above content. You choose what happens when it's clicked. | `ElevatedButton(onPressed: ..., child: ...)` |  |  |
-|   onPressed   | The code that gets run when a button is tapped or something happens. | `onPressed: () => doSomething()` |  |  |
-|   Stateless Widget   | A class that creates widgets that never change. Good for static screens. | `class HomeScreen extends StatelessWidget` | Home screen |  |
+|    Main  | A function that runs when your app starts. It tells Flutter what app to show. | `void main() => runApp(MyApp());` | starting | void main() => runApp(MyPortfolioApp()); |
+|   Material App   | The widget that sets up your whole app’s look and navigation. | `MaterialApp(...)` |  |         debugShowCheckedModeBanner: false,      title: 'TSA Portfolio',      theme: ThemeData( |
+|   scaffold   | A widget that gives you the basic layout: background, navigation bar, floating button, etc. | `Scaffold(...)` |  |       return Scaffold(      body: Column( mainAxisAlignment: MainAxisAlignment.start,        children: [ |
+|   column   | A widget that holds and displays your content in a straight line from top to bottom. | `Column(...)` |  |  body: Column( mainAxisAlignment: MainAxisAlignment.start,        children: [ |
+|   row   | A widget that shows things side-by-side. | `Row(...)` |  | child: Row(        children: [ |
+|   container   | A box that holds other widgets. You can add color, padding, borders, or size. | `Container(...)` |  | return Container(      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),      padding: const EdgeInsets.all(12), |
+|   text   | A widget to display text on the screen. | `Text('Hello')` |  |  const Text(              'HI EVERYONE,\nWelcome to the',              style: TextStyle(                fontSize: 28,                fontWeight: FontWeight.bold,                color: Colors.white,              ),              textAlign: TextAlign.center,            ), |
+|  image    | A widget to show an image using a link from the internet. | `Image.network('https://...')` |  |  {        "image": "https://placedog.net/550",        "text": "This is Luna, a cheerful retriever who loves playing fetch.",      }, |
+|  elevated button    | A clickable button that floats above content. You choose what happens when it's clicked. | `ElevatedButton(onPressed: ..., child: ...)` |  |   ElevatedButton(          onPressed: () => Navigator.pushNamed(context, '/alt'),          child: const Text('Alternate Design'),        ), |
+|   onPressed   | The code that gets run when a button is tapped or something happens. | `onPressed: () => doSomething()` |  |  onPressed: () => Navigator.pushNamed(context, '/background'), |
+|   Stateless Widget   | A class that creates widgets that never change. Good for static screens. | `class HomeScreen extends StatelessWidget` | Home screen | class AltDesignScreen extends StatelessWidget {  const AltDesignScreen({super.key}); |
 |   Stateful Widget   | A class for widgets that can change while the app is running. | `class MyWidget extends StatefulWidget` | Mario 3D World Level |  |
-|    Navigator  | Lets you move from one screen to another using route names. | `Navigator.pushNamed(context, '/about')` |  |  |
-|   Padding   | Makes space around a widget inside its container. | `Padding(padding: EdgeInsets.all(8.0), child: ...)` | The spacing between wall decor in a bedroom |  |
-|  Center    | Aligns content in the center of the screen or container. | `Center(child: ...)` | Title in the center of an app |  |
+|    Navigator  | Lets you move from one screen to another using route names. | `Navigator.pushNamed(context, '/about')` |  | onPressed: () => Navigator.pushNamed(context, '/showcase'), |
+|   Padding   | Makes space around a widget inside its container. | `Padding(padding: EdgeInsets.all(8.0), child: ...)` | The spacing between wall decor in a bedroom |  padding: const EdgeInsets.all(12), |
+|  Center    | Aligns content in the center of the screen or container. | `Center(child: ...)` | Title in the center of an app | body: Center(        child: Column( |
 |   Wrap   | Automatically puts widgets onto a new line when there's no space. | `Wrap(children: [...])` |  |  |
 |   Override   | This marks a method as one that’s replacing a method in a parent class. | `@override` |  |  |
 |   Build   | The special function in every widget that describes what gets drawn on the screen. | `Widget build(BuildContext context) {...}` |  |  |
