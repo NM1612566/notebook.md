@@ -81,7 +81,9 @@
 | integer overflow | Integer.MAX_VALUE + 1 == MIN_VALUE, it wraps around |  |  |  |
 | Integer underflow | Integer.MIN_VALUE - 1 == MAX_VALUE, it wraps around |  |  |  |
 | round-off error | an approx. of the actual value, result is rounded to the nearest value that fits within the available bits |  |  |  |
-|  |  |  |  |  |
+| Overloaded method/function or constructor | Uses the same name, but has different parameters | Pizza(), Pizza(String toppings) 2 constructors, first is a default cheese pizza, 2nd has 1 topping |  |  |
+| dot notation | Methods are called on objects using a dot after the object name | object.method(value); |  |  |
+| Concatenate | To combine Strings with other String and/or variables | String greeting = "Hellow" + "My name is " + name ". "; |  |  |
 
 
 
