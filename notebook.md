@@ -84,9 +84,21 @@
 | Overloaded method/function or constructor | Uses the same name, but has different parameters | Pizza(), Pizza(String toppings) 2 constructors, first is a default cheese pizza, 2nd has 1 topping |  |  |
 | dot notation | Methods are called on objects using a dot after the object name | object.method(value); |  |  |
 | Concatenate | To combine Strings with other String and/or variables | String greeting = "Hellow" + "My name is " + name ". "; |  |  |
+| index | location value of each character in a String or list, starting at 0 | "Hello" index of 'e' is 1 |  |  |
+| substring | Part of a larger String | "llo" is a substring of "Hello" |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
 
 
+[String notes](#string-notes)
+### String Notes
+  - Strings have indices (plural for index) which start at 0. "Hello" has indices 0(H), 1(e), 2(l), 3(l), 4(o).
+  - Final index in a String is length - 1;
 
+### String Methods Tabe
+
+<img width="1279" height="495" alt="image" src="https://github.com/user-attachments/assets/ae36a25a-fd0f-40eb-8d6c-0ef0c3e71a47" />
 
 
 ## Flutter Definitions
